@@ -1,0 +1,7 @@
+#!/bin/sh
+
+export SONAR_JDBC_USERNAME=$POSTGRESQL_ADDON_USER
+export SONAR_JDBC_PASSWORD=$POSTGRESQL_ADDON_PASSWORD
+export SONAR_JDBC_URL="jdbc:postgresql://${POSTGRESQL_ADDON_HOST}:${POSTGRESQL_ADDON_PORT}/${POSTGRESQL_ADDON_DB}"
+
+exec /opt/sonarqube/docker/entrypoint.sh
